@@ -50,21 +50,6 @@ namespace CsInstall {
       "/?"
     };
 
-    // TODO: decouple Program.ShortName and Installer.ShortName (where
-    // Installer.ShortName refers to the MSIX package)
-    // - This means changing the config path to ..\GenericShellExInfrastructure
-    //   and repackaging the MSIX
-
-    // TODO: update README.md to address:
-    // - change in config path
-    // - new help output
-    // - requirement to enable Developer Mode for installer (and an
-    //   explanation of why this is required)
-    // - change -- to em dash
-    // - update building instructions
-    // - explanation of certificate (thumbprint, expiration date, why it's
-    //   needed, etc.)
-
     private readonly bool install;
     private readonly bool uninstall;
     private readonly bool silent;
