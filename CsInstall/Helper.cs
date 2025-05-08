@@ -14,6 +14,7 @@ namespace CsInstall {
     private const string comspec = "%COMSPEC%";
     private const string comspecArgs = "/c";
     private const string comspecSilent = "> NUL";
+    private const string comspecStderrRedirect = "2>&1";
 
     private const string powerShell = "powershell";
     private const string powerShellParameters = "-NoProfile -ExecutionPolicy Bypass -Command";
@@ -53,7 +54,7 @@ namespace CsInstall {
 
           processStartInfo = new() {
             FileName = Comspec,
-            Arguments = $"{comspecArgs} {wherePwsh}",
+            Arguments = $"{comspecArgs} {wherePwsh} {comspecSilent} {comspecStderrRedirect}",
             UseShellExecute = false
           };
 
