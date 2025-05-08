@@ -11,6 +11,8 @@ namespace CsInstall {
   /// Installer helper methods.
   /// </summary>
   public static class Helper {
+    private const string thisAssembly = "{0}.dll";
+
     private const string comspec = "%COMSPEC%";
     private const string comspecArgs = "/c";
     private const string comspecSilent = "> NUL";
@@ -339,9 +341,18 @@ namespace CsInstall {
       try {
         System.IO.Directory.CreateDirectory(installer.InstallLocation);
 
-        // Copy this executable
+        // Copy the installer
         System.IO.File.Copy(
           $@"{AppDomain.CurrentDomain.BaseDirectory}\{installer.InstallerFile}",
+          $@"{installer.InstallLocation}\{installer.InstallerFile}",
+          overwrite: true
+        );
+
+        Assembly library = Assembly.GetExecutingAssembly();
+
+        // Copy this library
+        System.IO.File.Copy(
+          $@"{AppDomain.CurrentDomain.BaseDirectory}\{string.Format(thisAssembly, library.GetName().Name)}",
           $@"{installer.InstallLocation}\{installer.InstallerFile}",
           overwrite: true
         );
