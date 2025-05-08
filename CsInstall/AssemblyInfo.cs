@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("spakov")]
 [assembly: AssemblyProduct("CsInstall")]
-[assembly: AssemblyCopyright("Released under MIT License")]
+[assembly: AssemblyCopyright("spakov")]
 [assembly: AssemblyTrademark("Released under MIT License")]
 [assembly: AssemblyCulture("")]
 

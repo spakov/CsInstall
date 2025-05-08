@@ -353,7 +353,7 @@ namespace CsInstall {
         // Copy this library
         System.IO.File.Copy(
           $@"{AppDomain.CurrentDomain.BaseDirectory}\{string.Format(thisAssembly, library.GetName().Name)}",
-          $@"{installer.InstallLocation}\{installer.InstallerFile}",
+          $@"{installer.InstallLocation}\{string.Format(thisAssembly, library.GetName().Name)}",
           overwrite: true
         );
 
