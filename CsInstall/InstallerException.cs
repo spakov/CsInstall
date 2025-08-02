@@ -16,9 +16,9 @@ namespace CsInstall {
     /// </summary>
     internal bool Uninstall { get; set; }
 
-    /// <remarks>
+    /// <summary>
     /// Initializes an <see cref="InstallerException"/>.
-    /// </remarks>
+    /// </summary>
     /// <param name="message">The error message. This should end with
     /// punctuation.</param>
     /// <param name="exitCode"><inheritdoc cref="ExitCode"

@@ -60,7 +60,7 @@ namespace CsInstall {
     /// The installer definition to use.
     /// </summary>
     /// <remarks>Required.</remarks>
-    public Definition? Definition { get; set; }
+    public IDefinition? Definition { get; set; }
 
     /// <summary>
     /// The namespace containing embedded resources.

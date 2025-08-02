@@ -29,13 +29,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Definition.cs" />
+    <Compile Include="IDefinition.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Installer.cs" />
     <Compile Include="InstallerException.cs" />
     <Compile Include="IInstallerTask.cs" />
     <Compile Include="UninstallerException.cs" />
-    <Compile Include="UninstallerTask.cs" />
+    <Compile Include="IUninstallerTask.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

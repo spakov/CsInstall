@@ -11,9 +11,9 @@ namespace CsInstall {
     /// </summary>
     internal int ExitCode { get; set; }
 
-    /// <remarks>
+    /// <summary>
     /// Initializes an <see cref="UninstallerException"/>.
-    /// </remarks>
+    /// </summary>
     /// <param name="message">The error message. This should end with
     /// punctuation.</param>
     /// <param name="exitCode"><inheritdoc cref="ExitCode"
